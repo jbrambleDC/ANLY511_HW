@@ -1,0 +1,17 @@
+SAS: Companies use SAS mainly because of the support network SAS provides.
+SAS as a software package is better suited to less technical users. Many risk
+adverse companies avoid switching to R because of learning curve, lack of
+support/warranty, distrust of open source, and the fact that R performs in memory
+calculations. the downside to SAS is that it is expensive, closed source, and thus
+has a small if existant development community.
+
+R: R is open source and has a large and vibrant community that supports and extends
+the capability of R. This is also a much cheaper route than using SAS, though
+it does not come with the support of SAS.
+
+Python: I would argue that though python does not have quite the same statistical
+capabilities as R, it has made significant strides in the realm of visualization,
+dataframes, and machine learning. Python is generally faster than R. is also Free
+and Open source, and additionally it is much more productionizable than SAS and R
+meaning you can easily deploy Python Data Science code within a web app or some
+other software package and maintain it with the package management system pip or conda.

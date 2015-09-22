@@ -1,0 +1,63 @@
+> ##First lets define a function to simulate uniform distribution over some number of steps with a given starting max value
+> sim_unif = function(times,start){
++     curr_lim <- start
++     for (i in 1:times){
++         curr_x <- runif(1, max=curr_lim)
++         curr_lim <- curr_x
++     }
++     return(curr_x)
++ }
+> ## lets test a prelim output
+> print(sim_unif(6,1))
+[1] 0.05618636
+> #lets replicate it
+> vec <- replicate(1000, sim_unif(6,1))
+> ## here is the mean result
+> print(mean(vec,na.rm=T))
+[1] 0.01518111
+## now lets play around for extra credit and find a convergence (or close to it)
+> vec <- replicate(1000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.01418666
+> vec <- replicate(10000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.01560327
+> vec <- replicate(10000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.01613245
+> vec <- replicate(10000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.01506269
+> vec <- replicate(10000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.01581915
+> vec <- replicate(100000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.0155118
+> vec <- replicate(100000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.01559632
+> vec <- replicate(100000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.0157193
+> vec <- replicate(100000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.01541444
+> vec <- replicate(1000000, sim_unif(6,1))
+> print(mean(vec,na.rm=T))
+[1] 0.01559882
+> ## x_6 Converges to about .0156 with enough replications
+> ## lets check for x_4
+> vec <- replicate(1000000, sim_unif(4,1))
+> print(mean(vec,na.rm=T))
+[1] 0.06227103
+> vec <- replicate(1000000, sim_unif(4,1))
+> print(mean(vec,na.rm=T))
+[1] 0.06267345
+> vec <- replicate(1000000, sim_unif(4,1))
+> print(mean(vec,na.rm=T))
+[1] 0.06258098
+> vec <- replicate(1000000, sim_unif(4,1))
+> print(mean(vec,na.rm=T))
+[1] 0.06222621
+> ##for x_4, converges to between .062 and .063.

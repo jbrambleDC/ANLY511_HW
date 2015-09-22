@@ -1,0 +1,36 @@
+Problem 2
+> system.time(for (j in 1:100) z <- myattempts(.0001))
+   user  system elapsed
+  2.723   0.003   2.726
+> system.time(for (j in 1:100) z <- myattempts(.1))
+   user  system elapsed
+  0.002   0.000   0.002
+> system.time(for (j in 1:100) z <- myattempts(.99999))
+   user  system elapsed
+  0.001   0.000   0.001
+> system.time(for (j in 1:100) z <- myattempts(.5))
+   user  system elapsed
+      0       0       0
+> system.time(for (j in 1:100) z <- myattempts(.33))
+   user  system elapsed
+  0.001   0.000   0.001
+> system.time(for (j in 1:100) z <- 1
++             + rgeom(1,.0001))
+   user  system elapsed
+  0.000   0.000   0.001
+> system.time(for (j in 1:100) z <- 1
++             + rgeom(1,.1))
+   user  system elapsed
+      0       0       0
+> system.time(for (j in 1:100) z <- 1
++             + rgeom(1,.99999))
+   user  system elapsed
+      0       0       0
+> system.time(for (j in 1:100) z <- 1
++             + rgeom(1,.5))
+   user  system elapsed
+  0.001   0.000   0.001
+> system.time(for (j in 1:100) z <- 1
++             + rgeom(1,.33))
+   user  system elapsed
+      0       0       0

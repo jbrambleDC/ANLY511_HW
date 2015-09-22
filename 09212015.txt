@@ -1,0 +1,23 @@
+for E(X1*x2) = E(X1)*E(X2) only under certain conditions.
+
+formal def, discrete case:
+    E(X) = ∑(X*p(X=x)) X subset of R
+    for B(n,p) E(X) = np
+
+    for geometric distribution E(X) = 1/p
+    Geometric distribution = p(1-p)^i
+
+format def, cont case:
+    E(X) = ∫x*p(x)dx
+    ex: Uniform dist. on (a,b)
+      E(X) = ∫x*1(b-a)dx = ... = (a+b)/2 over (a,b)
+
+conditionl probability P(A|B) = P(A ∩ B)/P(B)
+    if A and B are independent events:
+        P(A ∩ B) = P(A)P(B)
+        if P(B) > 0:
+            P(A|B) = P(A ∩ B)/P(B) = P(A)
+        if P(A) > 0:
+            P(A|B) = P(A ∩ B)/P(A) = P(B)
+
+

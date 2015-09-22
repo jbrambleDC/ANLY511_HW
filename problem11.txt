@@ -1,0 +1,5 @@
+> x<-1:40
+> plot(pbinom(q=x,size=40,prob=.3),type='s')
+> lines(pnorm(q=x,mean=12,sd=2.9))
+> plot(pbinom(q=x,size=40,prob=.3),type='s')
+> lines(pnorm(q=x,mean=12,sd=2.9), type='s', col='green')

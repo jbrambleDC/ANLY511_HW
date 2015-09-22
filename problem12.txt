@@ -1,0 +1,5 @@
+> qqnorm(rnorm(10))
+> qqnorm(rnorm(20))
+> qqnorm(rnorm(40))
+> qqnorm(rnorm(100))
+> qqnorm(rnorm(1000))

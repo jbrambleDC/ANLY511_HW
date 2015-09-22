@@ -1,0 +1,27 @@
+> geom_bias = function(x,y){
++     vec <- rgeom(y,x)
++     E <- mean(vec^2)
++     p <-(sqrt(1 + 8*E)-1)/(2*E)
++     bias <- p - x
++ }
+> geom_bias(.3,4)
+> print(geom_bias(.3,4))
+[1] 0.04675105
+> print(geom_bias(.3,4))
+[1] 0.3090352
+> print(geom_bias(.3,4))
+[1] 0.1607687
+> print(geom_bias(.3,4))
+[1] 0.1607687
+> print(geom_bias(.3,4))
+[1] 0.3090352
+> vec <- replicate(100, geom_bias(.3, 4))
+> print(mean(vec))
+[1] 0.1959491
+> vec <- replicate(500, geom_bias(.3, 4))
+> print(mean(vec,na.rm=T))
+[1] 0.2233903
+> vec <- replicate(1000, geom_bias(.3, 4))
+> print(mean(vec,na.rm=T))
+[1] 0.2109203
+>

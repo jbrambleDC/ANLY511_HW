@@ -1,0 +1,11 @@
+> x<-1:20
+> plot(pbinom(q=x,size=20,prob=1/3))
+> plot(pbinom(q=x,size=20,prob=1/3),type='s')
+> plot(pbinom(q=x,size=20,prob=1/3),dhyper(q=x,k=20,m=40,n=80),type='s')
+Error in dhyper(q = x, k = 20, m = 40, n = 80) : unused argument (q = x)
+> plot(pbinom(q=x,size=20,prob=1/3),phyper(q=x,k=20,m=40,n=80),type='s')
+> plot(pbinom(q=x,size=20,prob=1/3),type='s')
+> lines(phyper(q=x,k=20,m=40,n=80),col='green')
+> lines(phyper(q=x,k=20,m=40,n=80),col='green',type='s')
+> plot(pbinom(q=x,size=20,prob=1/3),type='s')
+> lines(phyper(q=x,k=20,m=40,n=80),col='green',type='s')
