@@ -1,0 +1,27 @@
+a.sensitivty is the rate at which the breathalyzer correctly identifies a drunk driver, specificity is the true negative rate, in other words the rate at which we correctly identify sober people.
+
+sensitivity = TP/(TP + FN) TP => true prositive, FN => false negative
+TP = .99, FN = 1 - .99 = .01
+sensitivity = .99/1 = .99
+
+specificty = TN/(TN + FP) FP => False Positive , TN => True Negative
+TN = .99 , FP => .02 
+specificity = .99/(1.02) = .97
+
+b. 1/500 drivers are drunk; P(D) = .002, P(~D) = .998
+P(P|D) => probability that a drunk driver is identified as drunk = .99
+P(~P|D) => probability that a drunk driver, is negatively identifed = .01
+P(P|~D) => probability test yields positive on a sober driver = .02
+P(~P|~D) => probability that sober driver is identified as sober - .98
+
+we need P(D|P)
+lets first find P(P) and P(~P)
+P(P) = [P(P|D)*P(D)]+[P(P|~D)*P(~D)] = (.99*.002)+(.02*.998) = .00198 + .01996 = .02194
+P(~P) = [P(~P|D*P(D)] + [P(~P|~D)*P(~D)] = (.01*.002) + (.98*.998) = .00002 + .97804 = .97806
+
+P(D|P) = [P(P|D)*P(D)]/P(P) = (.99*.002)/.02194 = .0902 about a 9% chance, this is quite surprising
+this means that given a positive reading, the chance that the person is drunk is only 9%
+
+
+
+

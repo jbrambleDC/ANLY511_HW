@@ -1,36 +1,9 @@
 > pgamma(10,shape=2.5, scale=5, lower.tail=FALSE)
 [1] 0.549416
-> pgamma(5,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.849145
 > 1 - pgamma(5,shape=2.5, scale=5, lower.tail=FALSE)
 [1] 0.150855
-> pgamma(5,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.849145
-> pgamma(5,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.849145
-> 1 - pgamma(5,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.150855
-> qgamma(.1, shape=2.5 scale=5)
-Error: unexpected symbol in "qgamma(.1, shape=2.5 scale"
-> qgamma(.1, shape=2.5,scale=5)
-[1] 4.02577
+##prob x<z = .1, z = 23.09
 > qgamma(.1, shape=2.5,scale=5,lower.tail=FALSE)
 [1] 23.09089
-> pgamma(23.09,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.1000132
-> pgamma(13.09,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.3877627
-> pgamma(10.09,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.5442446
-> pgamma(3.09,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.9413774
-> pgamma(10,shape=2.5, scale=5, lower.tail=FALSE) - pgamma(5,shape=2.5, scale=5, lower.tail=FALSE)
-[1] -0.2997291
-> pgamma(5,shape=2.5, scale=5, lower.tail=FALSE) - pgamma(10,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.2997291
-> pgamma(5,shape=2.5, scale=5, lower.tail=FALSE) - pgamma(10,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.2997291
-> pgamma(5,shape=2.5, scale=5, lower.tail=FALSE) - pgamma(11,shape=2.5, scale=5, lower.tail=FALSE)
-[1] 0.3557715
 > pgamma(5,shape=2.5, scale=5, lower.tail=FALSE) - pgamma(11,shape=2.5, scale=5, lower.tail=FALSE)
 [1] 0.3557715

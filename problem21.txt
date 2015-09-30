@@ -1,0 +1,9 @@
+given that X = 0, prob of next x = 1 is .2,
+given that X = 1, prob of next x = 1 is .6
+
+X0 = 1. 
+x1 is 1 with .6 chance and 0 with .4 chance
+X2 is 1 with .6*.6 + .4*.2 chance, =.44, and 0 with .56 chance
+x3 is 1 with .44*.6 + .56*.2 = .376 and 0 with .624 chance
+
+x3 is a random variable with P(x=0)=.624, and P(x=1)=.376

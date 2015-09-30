@@ -1,0 +1,22 @@
+> simulate_beta = function(replications, samples, shape_a, shape_b){
++     reps = replications
++     data <- cbind(rbeta(samples,shape_a, shape_b))
++     for (i in 1:reps-1){
++         data <- cbind(data,rbeta(samples,shape_a,shape_b))
++     }
++     mean_data <- mean(sapply(1:reps, function(x) mean(data[,x])))
++     mean_sd <- mean(sapply(1:reps,function(x) sd(data[,x])))
++     mean_13 <- mean(sapply(1:reps,function(x) mean((data[,x])^(-1/3))))
++     mean_sq <- (sapply(1:reps,function(x) mean((data[,x])^(.5))))
++     print(mean_data) 
++     print(mean_sd) 
++     print(mean_13) 
++     print(mean(mean_sq))
++     print(sd(mean_sq))
++ }
+> simulate_beta(1000,10000,.5,.8)
+[1] 0.3845759
+[1] 0.3206909
+[1] 2.746615
+[1] 0.5436609
+[1] 0.002998763

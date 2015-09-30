@@ -1,0 +1,12 @@
+> sort(rnorm(100))->x
+> plot(pnorm(x))
+> rbinom(100,size= 20, prob=.8) -> x
+> pbinom(x, size = 20, prob =.8)
+> sort(pbinom(x, size = 20, prob =.8)) -> y
+> plot(y)
+> x<-sort(rexp(100))
+> plot(pexp(x))
+> x<-sort(rlnorm(1000))
+> plot(plnorm(x))
+> x<-sort(rexp(1000))
+> plot(pexp(x))

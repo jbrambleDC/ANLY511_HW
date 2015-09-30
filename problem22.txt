@@ -1,0 +1,18 @@
+> my_cauchy = function(samples, n) {
++     y <- rcauchy(samples)
++     x <- rcauchy(samples)
++     z <- x + y
++     for (i in 1:n-2){
++         z = z + rcauchy(samples)
++     }
++     result = z/n
++     xf <- data.frame(res = x)
++     zf <- data.frame(res = result)
++     xf$dist <- 'X'
++     zf$dist <- 'resulting distribution'
++     df <- rbind(xf,zf)
++     return(df)
++ }
+> my_cauchy(100,100)->result_vec
+> library("ggplot2")
+> ggplot(result_vec, aes(res, fill = dist)) + geom_density(alpha=.2)

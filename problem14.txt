@@ -1,0 +1,22 @@
+> 1 - pnorm(3)
+[1] 0.001349898
+> ##answer to part a
+> ##part b
+> 1 -pnorm(42, mean=35, sd=6)
+[1] 0.1216725
+> ##c
+ > dbinom(10,10,.8)
+ [1] 0.1073742
+ > ##d
+ > x <- 1 - punif(.9)
+ > print(x)
+ [1] 0.1
+ > ### this is p that x > .9
+ > punif(.9)
+ [1] 0.9
+ > #this is p that x ≤ .9
+ > # so we must subtract p x = .9
+ > ###since this is a continuous distribution the probability that x = .9 is infinitesmially small. so it would still = .9
+ > ##pt e
+ > 1 - pchisq(6.5,2)
+ [1] 0.03877421
