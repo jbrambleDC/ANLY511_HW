@@ -1,0 +1,20 @@
+a. F(X) <- 1- e^-lambda*x
+b. 1 - P(X ≤ A) = P(x > A) = 1 -(1 - e^-lammda*x) = e^-lambda*x
+c. we must consider two cases, one where A <z and when A ≥ z.
+if A < z, then we must find P(X > z ) = e^-lambda*z
+in the case where A≥z:
+    e^-lambda*A
+
+d. P(A|B) = P(A && B)/P(B)
+  in the case where A < z:
+      e^lambda*z/e^-lambda*A = e^lambda*(z-A)
+  in the case where A≥z:
+    P = 1, because e^lambda*A/e^-lambda*A
+
+e. P(Y >  y) = P(X > y+A| X > A)
+let z = y+A
+if A < z : A < y + A
+P(X > z|x > A) = P(X >y+A)|X >A) = (e^-lambda(y+A))/(e^-lambda*A) = e^-lambda*(y) = 1 - P(Y≤y) = P(Y >y)
+
+f. given that 1 - P(Y≤y) = e^-lambda*y:
+    P(Y≤y) = 1 - e^-lambda*y

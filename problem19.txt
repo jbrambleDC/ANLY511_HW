@@ -1,0 +1,4 @@
+> X <- runif(10000)
+> Y <- runif(10000)
+> Z <- X[Y<=(sin(2*pi*X)^2)]
+> hist(Z)

@@ -1,0 +1,23 @@
+given P(Xi+1 = k|Xi = j) = P(Xi+1 = j|Xi = k) for all i and all 1 ≤ j, k ≤ n:
+imagine a 10 x 10 matrix, n = 100
+X is the the ordered distribution of numbers between 1 and 100 corresponding to the square indices.
+so Xi = 10, means on the ith move the frog is in square 10!
+so P(Xi+1 = k|Xi = j) means that the probability the frog is in the kth square on the ith +1 move given that the frog is in the jth square on the ith move.
+in the case where k and j are not adjacent:
+    P(Xi+1 = k|Xi = j) = P(Xi+1 = j|Xi = k) = 0
+in the case where k and j are adjacent and j > 1 and k < 10( this extends to any case where j is not in the far left column and k is not divisible by 10, where j is greater than 10 and k less than 100):
+    P(Xi+1 = k|Xi = j) = P(Xi+1 = j|Xi = k)
+    because the probability of moving from j to adjacent k is the same as moving from k to adjacent j.
+    this is because the probability of moving to adjacent tiles is the same for all adjacent tiles.
+    if the frog is on square j and k is an adjacent square, then j is also adjacent to k when the frog is on k.
+
+however!
+ if we assume that diagonally adjacent tiles are also a valid move, then from the top row, for any square other than 1 and 10 we have 5 adjacent squares. if k is 5 and j is 4, frog is in square j, there is a 1/5 chance of moving to k. if frog is in square k there is 1/5 chance of moving to square j.
+
+ now lets consider and edge case, where j is 9 and k is 10. frog is in square j. we have a 1/5 chance of moving to square k, now if frog is in square k = 10, we now have 3 adjacent squares, so the chance of moving to j is 1/3. in this case: P(Xi+1 = k|Xi = j) != P(Xi+1 = j|Xi = k)
+
+ in this case the transition matrix is not symmetric, so false!
+
+
+
+

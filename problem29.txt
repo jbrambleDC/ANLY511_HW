@@ -1,0 +1,15 @@
+P(X=k) -> 1/n where n is number of sides of the dice. this is the pmf, since it is a discrete uniform dist
+this is a uniform distribution where k can be any value [1:n]
+
+P(Y=l|x=k) = p^l where l is ≤ k, P = 0 otherwise
+
+P(y=l,x=k) = p^l/n if l is less than k
+P(y=k,x=k) = p^k/n
+P(y = l, x = k) = 0 when l > k
+
+we are really looking for a binomil distribution to model Y(l successes in k trials)
+
+P(Y=l|x=k) = (k choose l)*p^l*(1-p)^(k-l)
+
+P(Y = l, x =k) = ((k choose l)*p^l*(1-p)^(k-l))/n this is zero if l > k
+

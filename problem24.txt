@@ -1,0 +1,41 @@
+a. P(C) = .6 && P(~C) = .4
+P(R|C) = .7 && P(R|~C) = .1
+step 1, calculate P(R)
+P(R) = P(R|C)*P(C) + P(R|~C)*P(C) = 0.46
+
+step 2 , calculate P(S):
+P(R,C)*P(C) = .7*.6 = .42
+P(R, ~C) = P(R|~C)*P(~C) = .1 * .4 = .04
+
+P(R,S) = P(S|R)*P(R); P(S|R)=P(S,R)/P(R)
+P(S,R) = P(S,R,C)*P(R,C) + P(S|R,~C)*P(R,~C)
+
+P(S,R) = .05 * .42 + .1 *.04 = .025
+P(R,~S) = P(~S|R)*P(R)
+P(R,~S) = .95*.42 + .9*.04 = .435
+
+P(~R,C) = P(~R|C)*P(C); P(~R,~C) = P(~R|~C)*P(~C)
+P(~R|C) = .3 P(C) = .6 P(~R,C) = .18
+P(~R|~C) = .9 P(~C) = .4 P(~R,~C) = .36
+Now calculate P(~R,S)
+P(~R,S) = P(S|~R)*P(~R)
+P(S|~R,C) *P(~R,C) = .072
+P(S|~R~C)* P(~R~C) = .288
+P(S,~R) = .36
+
+P(~R,~S) = P(~S|~R)*P(~R)
+P(~S|~R) = P(~S,~R)/P(~R) 
+P(~S,~R) = .6*.18 + .2*.36 = .18
+
+P(L) = .95*.025 + .4*.435 + .4*.36 + .1*.18
+= .75725
+
+b. P(R|L) = P(L,R)/P(L)
+P(L,R) = P(LRS)*P(RS) + P(LR~S)*PR~S) = .41525
+P(R|L) = .41525/.75725 = .54836
+
+c. sprinkler is on, what is the probability that it rained:
+P(R|S) = P(R,S)/P(S) from prob a this yields
+P(S) = P(S,R) + P(S,~R) = .025 + .36 = .385
+
+P(R|S) = .025/.385 = .065
