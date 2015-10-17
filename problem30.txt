@@ -1,0 +1,16 @@
+a. if we are in room 6, we have:
+P(x=6|x=6) = .5
+P(x=3|x=6) = .25
+P(x=5|x=6) = .25
+all other probabilities are 0
+
+b. P(X2 = 0|X0 =0)= 0 given that there is no room zer
+  but if we mean 1, then P(x2 =1|x0=1) = .3333 by doing b*b in matrix mult form
+
+  the R op for this is b %*%b for a matrix b
+
+c. we must do b^30, this yields p = .219 of being in square 9, so probability still alive is 1 - .219
+
+> b <- matrix(c(0.50,.5/3,0.00,.5/3,0.000,0.00,0.00,0.00,0,0.25,0.500,0.25,0.000,.5/3,0.00,0.00,0.00,0,0.00,.5/3,0.50,0.000,0.000,0.25,0.00,0.00,0,0.25,0.000,0.00,0.500,.5/3,0.00,0.25,0.00,0,0.00,.5/3,0.00,.5/3,0.500,0.25,0.00,0.00,0,0.00,0.000,0.25,0.000,.5/3,0.50,0.00,0.00,0,0.00,0.000,0.00,.5/3,0.000,0.00,0.50,0.25,0,0.00,0.000,0.00,0.000,0.000,0.00,0.25,0.50,0,0.00,0.000,0.00,0.000,0.000,0.00,0.00,0.25,1),nrow=9,ncol=9)
+> a<-b
+> for (i in 1:29){a <- a %*% b}

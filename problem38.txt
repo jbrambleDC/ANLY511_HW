@@ -1,0 +1,11 @@
+a. P(X=x) = P(Y=x|A)
+    imagine if we have plotted the pmf p(x), or P(X=x), now imagine if we randomly select a point on the x axis,
+    this is uniformly distributed, now imagine that we have generate another value between 0 an 1, if this is less than the graph of the pmf, at that point then we would accept.
+    given that this event has been accepted we know it less than the graph at that point, and the probability of that occuring is P(X=x).
+    if the point has been accepted we know it is under the graph of the pmf, at the uniformly chosen point Y=x, the probability of this occuring is p(x) or P(X=x).
+
+  prob(A) = l(X)/MN = P(Y=x)*P(U<l(X)/M)
+  P(y=x/A) = P(y=x)*P(A/Y=x) = M*P(A/Y=x)/l(x)
+  b. l(x)/M
+  c. sum(l(x)/M*1/N) = c/NM, summing over all N, will give us c/M!
+  d. 

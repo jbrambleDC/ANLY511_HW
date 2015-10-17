@@ -1,0 +1,13 @@
+P(X=x) -> e^-x, given that lamda = 1
+P(y=k|X=x) -> (x^k*e^-x)/k!
+
+> for (i in 1:10000){
++     x[i] = rexp(1,1)
++ }
+> for (i in 1:10000){
++     x[i] = rexp(1,1)
++     y[i] = rpois(1,x[i])
++ }
+> length(x[y==2])
+[1] 1278
+> hist(x[y==2])

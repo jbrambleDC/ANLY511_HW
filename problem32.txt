@@ -1,0 +1,27 @@
+> ##problem 32
+> #a
+> #0<=c(x+3y)<=1
+> #c<=1/(x+3y)
+> #c<=1/(10+3*8)
+> #c<=1/34
+> c=1/34
+> #b
+> a <- seq(1,8)
+> 3*a
+[1]  3  6  9 12 15 18 21 24
+> sum(3*a)
+[1] 108
+> #this yeilds fx = ##1/34(8x + 108)
+> ##now for fy
+> sum(seq(1,10))
+[1] 55
+> 3*8
+[1] 24
+##fy = 1/34(55 + 24y)
+> #c
+> #Find the conditional distribution of Z = Y |(X = 5), using R
+> x <- 5
+> fxy <- function(y,x){(x + 3*y)/34}
+> fx <- function(x){(8*x+108)/34}
+> f_given_5 = function(y){fxy(y,5)/fx(5)}
+> ##Z = Y|(X=5) = (3*y + x)/(8*x+108) = (3*y+ 5)/148

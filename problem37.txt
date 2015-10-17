@@ -1,0 +1,4 @@
+suppose X is a normal distribution,
+X <- Norm(0,1)
+since E(Y)=aX+b+Z:
+E(Y|X) = aE(X|X)+E(b)+E(Z) = aX+b+0=aX+b

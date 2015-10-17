@@ -2,8 +2,7 @@
  there are 10 odd red numbers, since there is also a bet on odd the bet here is $2 dollars,
  so we would have 10/36*$4.
  there are 8 odd black numbers so this would yeild 8/36*$2 for expected value
-
- so our total EV is 8/36($4) + 10/36($4) = 18/36*$4 = $2 dollars. for any given bet of $2 dollars using this strategy.
- this means we are expected to break even using this strategy.
-
+ there are 10 even black numberes, so this yeilds 10/36(-2) for expected value.
+ P(W) = P(RE) + P(OR) + P(OB) - P(~R~O) = 18/36 + 8/36 - 10/36. P(W) -> 16/36 or 4/9
+ EV -> 8/36(2-2) + 10/36(2) + 8/36(2-2) +10/36(-2) = 0, we are expected to break even
 

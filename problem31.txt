@@ -1,0 +1,16 @@
+a. P(N=n) = lam^n*e^-lam/n!
+   P(X=k|N=n) = (n choose k)*p^k*(1 - p)^(n-k)
+   P(X=k,N=n) = (n choose k)*p^k*(1-p)^(n-k)*lam^n*e^-lam/n
+
+i> jointPMF = function(lambda, p, k){
++     n = rpois(k, lambda)
++     return(rbinom(k, n, p))
++ }
+> ##pt .c, lamda= 6, p =.25, k = 2
+> mean(replicate(1000, jointPMF(6, .25, 2)))
+[1] 1.4755
+
+the mean of a poisson distribution is lambda, in this case is 6
+E(N) = 6 then
+mean of binomial distribution is np,
+so mean = 6*.25 = 1.5, this is extremely close to the calculated value 

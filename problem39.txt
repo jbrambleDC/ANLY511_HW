@@ -1,0 +1,6 @@
+> for (i in 1:10000){
++     x[i] = rexp(1,.5)
++     y[i] = rpois(1,x[i])
++ }
+> hist(x[y==2])
+> hist(y)
